@@ -1,0 +1,29 @@
+<div style="widht:100%;height:50px;background: #101010;">
+</div>
+<div>
+    <div style="width:15%;float:left;height:50px;margin-top: 5px;"></div>
+    <div style="float:left;width:85%;height:50px;margin-top: 5px;">
+        <ul class="nav nav-tabs">
+            <li role="presentation" <% if(path0 == "fun1"){ %>class="active" <% } else{} %> id="fun1" onclick="swichTopTab(this)"><a href="#">功能一</a></li>
+            <li role="presentation" <% if(path0 == "fun2"){ %>class="active" <% } else{} %> id="fun2" onclick="swichTopTab(this)"><a href="#">功能二</a></li>
+            <li role="presentation" <% if(path0 == "fun3"){ %>class="active" <% } else{} %> id="fun3" onclick="swichTopTab(this)"><a href="#">功能三</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+function swichTopTab(e){
+    var tabName = $(e).attr("id")
+    var host = window.location.host
+    if(tabName == "fun1"){
+        window.location.href = "http://" + host + "/fun1"
+    }else if(tabName == "fun2"){
+        window.location.href = "http://" + host + "/fun2"
+    }else if(tabName == "fun3"){
+        window.location.href = "http://" + host + "/fun3"
+    }else{
+        alert(tabName)
+    }
+
+
+}
+</script>
